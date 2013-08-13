@@ -1,0 +1,39 @@
+class UsersController < ApplicationController
+
+def index
+  @users = User.all
+  render :json => @users
+end
+
+def show
+    @user = User.find(params[:id])
+    render :json => @user
+end
+
+def new
+end
+
+def create
+  @user = User.new(user_params)
+  if @user.save
+    redirect_to @user
+  else
+    flash "error creating user"
+  end
+end
+
+def edit
+  @user = User.find(params[:id])
+end
+
+def update
+    @user = User.find(params[:id])
+    @user.update_attributes(user_params)
+    render :json => @user
+end
+
+private
+  def user_params
+    params.required(:user).permit(:first_name, :last_name, :manager, :mobile_phone, :postal_address, :status, :username, :password)
+  end
+end

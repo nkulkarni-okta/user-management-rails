@@ -1,0 +1,44 @@
+<%= form_for :user do |f| %>
+  <p>
+    <%= f.label @user.username %><br>
+  </p>
+
+  <p>
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
+  </p>
+
+  <p>
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </p>
+
+  <p>
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </p>
+
+  <p>
+    <%= f.label :manager %><br>
+    <%= f.text_field :manager %>
+  </p>
+ 
+  <p>
+    <%= f.label :mobile_phone %><br>
+    <%= f.text_field :mobile_phone %>
+  </p>
+
+  <p>
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </p>
+
+  <p>
+    <%= f.label :postal_address %><br>
+    <%= f.text_field :postal_address %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
