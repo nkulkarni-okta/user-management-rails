@@ -1,0 +1,59 @@
+<%= form_for :user, url: user_path(@user), html: {method: "put"} do |f| %>
+  <p>
+    <%= f.label @user.email %><br>
+  </p>
+
+  <p>
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
+  </p>
+
+  <p>
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </p>
+
+  <p>
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </p>
+
+  <p>
+    <%= f.label :manager %><br>
+    <%= f.text_field :manager %>
+  </p>
+ 
+  <p>
+    <%= f.label :phone_number %><br>
+    <%= f.text_field :phone_number %>
+  </p>
+
+  <p>
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </p>
+  
+  <p>
+    <%= f.label :street %><br>
+    <%= f.text_field :street %>
+  </p>
+
+ <p>
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </p>
+
+ <p>
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </p>
+
+ <p>
+    <%= f.label :zipcode %><br>
+    <%= f.text_field :zipcode %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
