@@ -3,12 +3,12 @@ class CreateUsers < ActiveRecord::Migration
     create_table :users do |t|
       t.string :username
       t.string :hashed_password
-      t.string :first_name
-      t.string :last_name
+      t.string :firstName
+      t.string :lastName
       t.string :manager
-      t.string :mobile_phone
+      t.string :mobilePhone
       t.integer :status
-      t.string :postal_address
+      t.string :postalAddress
       t.string :salt
       t.timestamps
     end

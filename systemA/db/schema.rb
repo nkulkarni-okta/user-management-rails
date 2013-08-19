@@ -16,12 +16,13 @@ ActiveRecord::Schema.define(:version => 20130812182045) do
   create_table "users", :force => true do |t|
     t.string   "username"
     t.string   "hashed_password"
-    t.string   "first_name"
-    t.string   "last_name"
+    t.string   "firstName"
+    t.string   "lastName"
     t.string   "manager"
-    t.string   "mobile_phone"
+    t.string   "mobilePhone"
     t.integer  "status"
-    t.string   "postal_address"
+    t.string   "postalAddress"
+    t.string   "salt"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
   end

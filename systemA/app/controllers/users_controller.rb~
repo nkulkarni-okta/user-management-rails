@@ -20,7 +20,16 @@ def create
   else
     flash "error creating user"
   end
-    
+end
+
+def edit
+  @user = User.find(params[:id])
+end
+
+def update
+    @user = User.find(params[:id])
+    @user.update_attributes(user_params)
+    render :json => @user
 end
 
 private
