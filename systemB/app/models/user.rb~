@@ -2,7 +2,7 @@ require 'bcrypt'
 class User < ActiveRecord::Base
   include ActiveModel::ForbiddenAttributesProtection, BCrypt
   attr_accessor :password, :salt
-  attr_accessible :email, :first_name, :last_name, :manager, :phone_number, :address, :status
+  attr_accessible :email, :first_name, :last_name, :manager, :phone_number, :street, :state, :city, :zipcode, :status
   attr_protected :hashed_password
 
   before_save :encrypt_pass
